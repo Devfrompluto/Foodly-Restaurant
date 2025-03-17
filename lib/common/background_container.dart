@@ -9,22 +9,28 @@ class BackGroundContainer extends StatelessWidget {
   final Color? color;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: height,
-      decoration: BoxDecoration(
-        color: color ?? kLightWhite,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(30.r),
-          topRight: Radius.circular(30.r),
-        ),
-        image: DecorationImage(
-            image: AssetImage(
-              'assets/images/restaurant_bk.png',
-            ),
-            fit: BoxFit.cover),
+    return ClipRRect(
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(20.r),
+        topRight: Radius.circular(20.r),
       ),
-      child: child,
+      child: Container(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          color: color ?? kLightWhite,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20.r),
+            topRight: Radius.circular(20.r),
+          ),
+          image: DecorationImage(
+              image: AssetImage(
+                'assets/images/restaurant_bk.png',
+              ),
+              fit: BoxFit.cover),
+        ),
+        child: child,
+      ),
     );
   }
 }
