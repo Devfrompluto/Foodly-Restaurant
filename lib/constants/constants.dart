@@ -21,3 +21,13 @@ double height = 825.h;
 double width = 430.w;
 
 const String appBaseUrl = "http://localhost:6003";
+
+List<String> orderList = [
+  "New Orders",
+  "Preparing",
+  "Ready",
+  "Picked Up",
+  "Self Deliveries",
+  "Delivered",
+  "Cancelled",
+];
